@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projekaulia/views/dashboard/dashboard_view.dart';
 
 class LoginLiat extends StatelessWidget {
   const LoginLiat({super.key});
@@ -67,7 +68,11 @@ class tombolLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (bc) {
+            return DashboardView();
+          }));
+        },
         style: ElevatedButton.styleFrom(
             backgroundColor: Color.fromARGB(255, 255, 0, 119),
             shape: RoundedRectangleBorder(
